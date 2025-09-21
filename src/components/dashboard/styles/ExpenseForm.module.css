@@ -1,0 +1,39 @@
+   .card {
+     @apply card bg-base-100 shadow-xl p-4 mb-4;
+   }
+
+   .title {
+     @apply text-xl font-bold mb-4;
+   }
+
+   .form {
+     @apply space-y-4;
+   }
+
+   .inputGroup {
+     @apply flex flex-col;
+   }
+
+   .label {
+     @apply label;
+   }
+
+   .input {
+     @apply input input-bordered w-full;
+   }
+
+   .select {
+     @apply select select-bordered w-full;
+   }
+
+   .checkbox {
+     @apply checkbox;
+   }
+
+   .error {
+     @apply text-error text-sm mt-1;
+   }
+
+   .submitButton {
+     @apply btn btn-primary;
+   }

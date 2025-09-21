@@ -1,0 +1,19 @@
+  .card {
+     @apply card bg-base-100 shadow-xl p-4;
+   }
+
+   .tabs {
+     @apply tabs tabs-boxed mb-4;
+   }
+
+   .tab {
+     @apply tab;
+   }
+
+   .active {
+     @apply tab-active;
+   }
+
+   .title {
+     @apply text-xl font-bold mb-4 mt-4;
+   }

@@ -1,0 +1,11 @@
+   .card {
+     @apply card bg-base-100 shadow-xl p-4 mt-4;
+   }
+
+   .title {
+     @apply text-xl font-bold mb-4;
+   }
+
+   .empty {
+     @apply text-center text-gray-500;
+   }

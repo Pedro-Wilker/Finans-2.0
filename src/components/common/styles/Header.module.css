@@ -1,0 +1,19 @@
+.header {
+    @apply navbar bg-primary text-primary-content;
+}
+
+.logo {
+    @apply flex-1;
+}
+
+.logo h1 {
+    @apply text-xl font-bold;
+}
+
+.userActions {
+    @apply flex-none gap-2;
+}
+
+.logoutButton {
+    @apply btn btn-ghost;
+}

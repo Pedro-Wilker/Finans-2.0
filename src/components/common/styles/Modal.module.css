@@ -1,0 +1,15 @@
+.modal {
+    @apply modal modal-open;
+}
+
+.modalBox {
+    @apply modal-box;
+}
+
+.modalAction {
+    @apply modal-action;
+}
+
+.closeButton {
+    @apply btn;
+}

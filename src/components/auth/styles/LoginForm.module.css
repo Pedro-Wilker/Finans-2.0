@@ -1,0 +1,27 @@
+   .form {
+       @apply space-y-4;
+   }
+
+   .inputGroup {
+       @apply flex flex-col;
+   }
+
+   .label {
+       @apply label;
+   }
+
+   .input {
+       @apply input input-bordered w-full;
+   }
+
+   .error {
+       @apply text-error text-sm mt-1;
+   }
+
+   .submitButton {
+       @apply btn btn-primary w-full;
+   }
+
+   .link {
+       @apply link link-primary text-sm;
+   }
