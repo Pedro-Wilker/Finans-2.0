@@ -8,6 +8,9 @@ export const loginSchema = yup.object({
 export const registerSchema = yup.object({
   name: yup.string().required('Nome é obrigatório'),
   email: yup.string().email('Email inválido').required('Email é obrigatório'),
+  phone: yup.string().optional().nullable(),
+  profession: yup.string().optional().nullable(),
+  profile_photo: yup.mixed().optional().nullable(),
   password: yup.string().min(6, 'Senha deve ter pelo menos 6 caracteres').required('Senha é obrigatória'),
 });
 

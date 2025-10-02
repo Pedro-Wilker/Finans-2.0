@@ -1,39 +1,47 @@
-   .card {
-     @apply card bg-base-100 shadow-xl p-4 mb-4;
-   }
+.card {
+  background-color: #ffffff; /* Approximates bg-base-100 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Approximates shadow-xl */
+  padding: 1rem; /* p-4 */
+}
 
-   .title {
-     @apply text-xl font-bold mb-4;
-   }
+.title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+}
 
-   .form {
-     @apply space-y-4;
-   }
+.empty {
+  text-align: center;
+  color: #6b7280; /* Approximates text-gray-500 */
+}
 
-   .inputGroup {
-     @apply flex flex-col;
-   }
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Approximates space-y-2 */
+}
 
-   .label {
-     @apply label;
-   }
+.item {
+  padding: 0.5rem; /* p-2 */
+  border: 1px solid #d1d5db; /* Approximates border (gray-300) */
+  border-radius: 0.25rem; /* rounded */
+}
 
-   .input {
-     @apply input input-bordered w-full;
-   }
+.description {
+  font-weight: 600; /* Approximates font-semibold */
+}
 
-   .select {
-     @apply select select-bordered w-full;
-   }
-
-   .checkbox {
-     @apply checkbox;
-   }
-
-   .error {
-     @apply text-error text-sm mt-1;
-   }
-
-   .submitButton {
-     @apply btn btn-primary;
-   }
+.deleteButton {
+  padding: 0.25rem 0.5rem; /* Approximates btn-sm */
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #ef4444; /* Approximates btn-error (red-500) */
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 0.5rem; /* mt-2 */
+}
+.deleteButton:hover {
+  background-color: #dc2626; /* Darker red on hover */
+}

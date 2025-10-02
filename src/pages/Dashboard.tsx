@@ -18,9 +18,18 @@ const Dashboard = () => {
         const fetchExpenses = async () => {
             try {
                 const response = await api.get('/expenses');
-                setExpenses(response.data);
+                // Ensure response.data is an array
+                if (Array.isArray(response.data)) {
+                    setExpenses(response.data);
+                } else {
+                    console.error('Expected an array, got:', response.data);
+                    setExpenses([]);
+                    toast.error('Dados de despesas inválidos');
+                }
             } catch (error) {
+                console.error('Error fetching expenses:', error);
                 toast.error('Erro ao carregar despesas');
+                setExpenses([]);
             } finally {
                 setLoading(false);
             }

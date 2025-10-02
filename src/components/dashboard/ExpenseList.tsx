@@ -19,6 +19,11 @@ const ExpenseList = ({ expenses, setExpenses }: ExpenseListProps) => {
         }
     };
 
+    if (!Array.isArray(expenses)) {
+        console.error('Expenses is not an array:', expenses);
+        return <p className={styles.empty}>Erro: Dados de despesas inválidos</p>;
+    }
+
     return (
         <div className={styles.card}>
             <h2 className={styles.title}>Lista de Despesas</h2>

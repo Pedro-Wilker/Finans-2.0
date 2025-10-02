@@ -1,27 +1,47 @@
-   .card {
-     @apply card bg-base-100 shadow-xl p-4;
-   }
+.card {
+  background-color: #ffffff; /* Approximates bg-base-100 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Approximates shadow-xl */
+  padding: 1rem; /* p-4 */
+}
 
-   .title {
-     @apply text-xl font-bold mb-4;
-   }
+.title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+}
 
-   .empty {
-     @apply text-center text-gray-500;
-   }
+.empty {
+  text-align: center;
+  color: #6b7280; /* Approximates text-gray-500 */
+}
 
-   .list {
-     @apply space-y-2;
-   }
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Approximates space-y-2 */
+}
 
-   .item {
-     @apply p-2 border rounded;
-   }
+.item {
+  padding: 0.5rem; /* p-2 */
+  border: 1px solid #d1d5db; /* Approximates border (gray-300) */
+  border-radius: 0.25rem; /* rounded */
+}
 
-   .description {
-     @apply font-semibold;
-   }
+.description {
+  font-weight: 600; /* Approximates font-semibold */
+}
 
-   .deleteButton {
-     @apply btn btn-error btn-sm mt-2;
-   }
+.deleteButton {
+  padding: 0.25rem 0.5rem; /* Approximates btn-sm */
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #ef4444; /* Approximates btn-error (red-500) */
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 0.5rem; /* mt-2 */
+}
+.deleteButton:hover {
+  background-color: #dc2626; /* Darker red on hover */
+}

@@ -8,6 +8,11 @@ interface LoginResponse {
     token: string;
 }
 
+interface RegisterResponse {
+    id: string;
+    email: string;
+}
+
 export const login = async (email: string, password: string): Promise<void> => {
     const response = await api.post<LoginResponse>('/login', { email, password });
     const token = response.data.token;
@@ -16,9 +21,15 @@ export const login = async (email: string, password: string): Promise<void> => {
     localStorage.setItem('token', token);
 };
 
-export const register = async (name: string, email: string, password: string): Promise<void> => {
-    const response = await api.post<LoginResponse>('/users', { name, email, password });
-    const token = response.data.token;
+export const register = async (data: FormData): Promise<void> => {
+    await api.post<RegisterResponse>('/users', data, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+    });
+    const email = data.get('email') as string;
+    const password = data.get('password') as string;
+    // Automatically log in after registration
+    const loginResponse = await api.post<LoginResponse>('/login', { email, password });
+    const token = loginResponse.data.token;
     const user = jwtDecode<User>(token);
     store.dispatch(setCredentials({ user, token }));
     localStorage.setItem('token', token);
