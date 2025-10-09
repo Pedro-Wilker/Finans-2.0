@@ -1,5 +1,5 @@
 import RegisterForm from '../components/auth/RegisterForm';
-import styles from './styles/Register.module.css';
+import styles from './styles/Register.module.scss';
 
 const Register = () => (
     <div className={styles.container}>

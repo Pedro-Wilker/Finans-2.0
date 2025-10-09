@@ -1,0 +1,9 @@
+$dark-bg: #1a1a20;
+
+.footer {
+  @extend .footer;
+  @extend .footer-center;
+  padding: 1rem;
+  background-color: $dark-bg;
+  color: #e0e0e0;
+}

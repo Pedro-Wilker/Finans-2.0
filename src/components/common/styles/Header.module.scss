@@ -1,0 +1,31 @@
+$primary-blue: #4c6cff;
+$dark-bg: #1a1a20;
+
+.header {
+  @extend .navbar;
+  background-color: $dark-bg;
+  color: #e0e0e0;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.userActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.logoutButton {
+  @extend .btn;
+  background: linear-gradient(90deg, $primary-blue 0%, #1773e3 100%);
+  color: white;
+  &:hover {
+    opacity: 0.9;
+  }
+}

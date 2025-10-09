@@ -3,8 +3,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { loginSchema } from '../../utils/validators';
 import { login } from '../../services/auth';
 import toast from 'react-hot-toast';
-import { useNavigate, Link } from 'react-router-dom';
-import styles from './styles/LoginForm.module.css';
+import { useNavigate } from 'react-router-dom';
+import styles from './styles/LoginForm.module.scss';
 
 interface LoginFormData {
     email: string;
@@ -41,7 +41,6 @@ const LoginForm = () => {
             </div>
             <button type="submit" className={styles.submitButton}>Entrar</button>
             <a href="/forgot-password" className={styles.link}>Esqueceu a senha?</a>
-            <Link to="/register" className={styles.registerButton}>Criar uma conta</Link>
         </form>
     );
 };

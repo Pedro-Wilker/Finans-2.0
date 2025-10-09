@@ -1,0 +1,72 @@
+$primary-blue: #4c6cff;
+$error-red: #ef4444;
+
+.card {
+  @extend .card;
+  @extend .bg-base-100;
+  @extend .shadow-xl;
+  @extend .p-4;
+  @extend .mb-4;
+}
+
+.title {
+  @extend .text-xl;
+  @extend .font-bold;
+  @extend .mb-4;
+}
+
+.form {
+  @extend .space-y-4;
+}
+
+.inputGroup {
+  @extend .flex;
+  @extend .flex-col;
+}
+
+.label {
+  @extend .label;
+}
+
+.input {
+  @extend .input;
+  @extend .input-bordered;
+  @extend .w-full;
+}
+
+.select {
+  @extend .select;
+  @extend .select-bordered;
+  @extend .w-full;
+}
+
+.checkbox {
+  @extend .checkbox;
+}
+
+.error {
+  color: $error-red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.actions {
+  @extend .flex;
+  @extend .gap-2;
+}
+
+.submitButton {
+  @extend .btn;
+  @extend .btn-primary;
+  background: linear-gradient(90deg, $primary-blue 0%, #1773e3 100%);
+  color: white;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.cancelButton {
+  @extend .btn;
+  @extend .btn-secondary;
+}

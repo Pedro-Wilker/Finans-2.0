@@ -1,0 +1,23 @@
+$primary-blue: #4c6cff;
+
+.modal {
+  @extend .modal;
+  @extend .modal-open;
+}
+
+.modalBox {
+  @extend .modal-box;
+}
+
+.modalAction {
+  @extend .modal-action;
+}
+
+.closeButton {
+  @extend .btn;
+  background: linear-gradient(90deg, $primary-blue 0%, #1773e3 100%);
+  color: white;
+  &:hover {
+    opacity: 0.9;
+  }
+}

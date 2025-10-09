@@ -1,0 +1,39 @@
+$primary-blue: #4c6cff;
+$error-red: #ef4444;
+
+.form {
+  @extend .space-y-4;
+}
+
+.inputGroup {
+  @extend .flex;
+  @extend .flex-col;
+}
+
+.label {
+  @extend .label;
+}
+
+.input {
+  @extend .input;
+  @extend .input-bordered;
+  @extend .w-full;
+}
+
+.error {
+  color: $error-red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.submitButton {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .w-full;
+  background: linear-gradient(90deg, $primary-blue 0%, #1773e3 100%);
+  color: white;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

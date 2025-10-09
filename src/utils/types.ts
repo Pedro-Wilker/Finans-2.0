@@ -9,7 +9,6 @@ export interface User {
 
 export interface Expense {
   id: string;
-  user_id: string;
   description: string;
   amount: number;
   date: string;
@@ -17,6 +16,4 @@ export interface Expense {
   type: 'academia' | 'alimentacao_basica' | 'passagens' | 'besteiras' | 'lazer' | 'hobbie' | 'educacao' | 'saude' | 'vestuario' | 'moradia' | 'transporte' | 'investimentos' | 'outros';
   is_recurring: boolean;
   currency: string;
-  created_at: string;
-  updated_at: string;
 }

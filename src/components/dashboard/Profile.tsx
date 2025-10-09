@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { type RootState } from '../../store';
-import styles from './styles/Profile.module.css';
+import styles from './Profile.module.css';
 
 const Profile = () => {
   const { user } = useSelector((state: RootState) => state.auth);

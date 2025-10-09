@@ -1,14 +1,15 @@
-import type { Expense } from '../../utils/types';
+import { type Expense } from '../../utils/types';
 import api from '../../services/api';
 import toast from 'react-hot-toast';
-import styles from './styles/ExpenseList.module.css';
+import styles from './ExpenseList.module.css';
 
 interface ExpenseListProps {
     expenses: Expense[];
     setExpenses: React.Dispatch<React.SetStateAction<Expense[]>>;
+    setEditingExpense?: React.Dispatch<React.SetStateAction<Expense | null>>;
 }
 
-const ExpenseList = ({ expenses, setExpenses }: ExpenseListProps) => {
+const ExpenseList = ({ expenses, setExpenses, setEditingExpense }: ExpenseListProps) => {
     const handleDelete = async (id: string) => {
         try {
             await api.delete(`/expenses/${id}`);
@@ -19,10 +20,9 @@ const ExpenseList = ({ expenses, setExpenses }: ExpenseListProps) => {
         }
     };
 
-    if (!Array.isArray(expenses)) {
-        console.error('Expenses is not an array:', expenses);
-        return <p className={styles.empty}>Erro: Dados de despesas inválidos</p>;
-    }
+    const handleEdit = (expense: Expense) => {
+        setEditingExpense?.(expense);
+    };
 
     return (
         <div className={styles.card}>
@@ -40,12 +40,20 @@ const ExpenseList = ({ expenses, setExpenses }: ExpenseListProps) => {
                             <p>Categoria: {expense.category}</p>
                             <p>Tipo: {expense.type}</p>
                             <p>Recorrente: {expense.is_recurring ? 'Sim' : 'Não'}</p>
-                            <button
-                                className={styles.deleteButton}
-                                onClick={() => handleDelete(expense.id)}
-                            >
-                                Excluir
-                            </button>
+                            <div className={styles.actions}>
+                                <button
+                                    className={styles.editButton}
+                                    onClick={() => handleEdit(expense)}
+                                >
+                                    Editar
+                                </button>
+                                <button
+                                    className={styles.deleteButton}
+                                    onClick={() => handleDelete(expense.id)}
+                                >
+                                    Excluir
+                                </button>
+                            </div>
                         </li>
                     ))}
                 </ul>

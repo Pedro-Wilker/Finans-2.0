@@ -1,0 +1,35 @@
+.card {
+  @apply card bg-base-100 shadow-xl p-4;
+}
+
+.title {
+  @apply text-xl font-bold mb-4;
+}
+
+.empty {
+  @apply text-center text-gray-500;
+}
+
+.list {
+  @apply space-y-2;
+}
+
+.item {
+  @apply p-2 border rounded;
+}
+
+.description {
+  @apply font-semibold;
+}
+
+.actions {
+  @apply flex gap-2 mt-2;
+}
+
+.editButton {
+  @apply btn btn-primary btn-sm;
+}
+
+.deleteButton {
+  @apply btn btn-error btn-sm;
+}

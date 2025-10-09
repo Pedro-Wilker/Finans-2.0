@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { type RootState } from '../../store';
 import { logout } from '../../store/authSlice';
-import styles from './styles/Header.module.css';
+import styles from './Header.module.css';
 
 const Header = () => {
   const dispatch = useDispatch();

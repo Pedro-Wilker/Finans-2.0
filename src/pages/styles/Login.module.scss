@@ -1,0 +1,25 @@
+$primary-blue: #4c6cff;
+
+.container {
+  @extend .min-h-screen;
+  @extend .flex;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .bg-base-200;
+}
+
+.card {
+  @extend .card;
+  @extend .bg-base-100;
+  @extend .shadow-xl;
+  @extend .p-6;
+  @extend .w-full;
+  @extend .max-w-md;
+}
+
+.title {
+  @extend .text-2xl;
+  @extend .font-bold;
+  @extend .mb-4;
+  @extend .text-center;
+}

@@ -5,7 +5,7 @@ import { resetPassword } from '../services/auth';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../components/common/Modal';
-import styles from './styles/ResetCodeModal.module.css';
+import styles from './styles/ResetCodeModal.module.scss';
 
 interface ResetPasswordFormData {
     email: string;
